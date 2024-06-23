@@ -893,6 +893,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlowerPatch 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 916bf98cc737fd74385f36e6bd9d6809,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3014,6 +3019,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lex_Plant_1_final
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b24c1894541ab9041abf6452841b1462,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
