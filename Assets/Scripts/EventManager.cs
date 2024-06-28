@@ -14,25 +14,20 @@ public class EventManager : MonoBehaviour
     [SerializeField] private Material DaySkyBox;
     [SerializeField] private Material NightSkyBox;
 
-    [Header("Animations")]
-    [SerializeField] public AnimationClip TurnRed;
-    //private Animation TurnRed;
-
     private bool isDay = true;
-    //private bool isNight = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        //TurnRed = GetComponent<Animation>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if(isDay == true)
+            if (isDay == true)
             {
                 NightTime();
             }
@@ -44,6 +39,7 @@ public class EventManager : MonoBehaviour
         }
         
     }
+   
 
     private void NightTime()
     {
@@ -53,7 +49,7 @@ public class EventManager : MonoBehaviour
 
         DayPostProcessing.SetActive(false);
         NightPostProcessing.SetActive(true);
-        //TurnRed.Play();
+        
 
         isDay = false;
         //isNight = true;
@@ -70,4 +66,5 @@ public class EventManager : MonoBehaviour
         isDay = true;
         //isNight = false;
     }
+
 }
