@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 
 public class EventManager : MonoBehaviour
@@ -13,12 +14,14 @@ public class EventManager : MonoBehaviour
     [Header("Skybox")]
     [SerializeField] private Material DaySkyBox;
     [SerializeField] private Material NightSkyBox;
+    
 
     private bool isDay = true;
 
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -37,7 +40,12 @@ public class EventManager : MonoBehaviour
             }
 
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            Menu();
+        }
+
     }
    
 
@@ -65,6 +73,19 @@ public class EventManager : MonoBehaviour
 
         isDay = true;
         //isNight = false;
+    }
+
+    private void Menu()
+    {
+
+        if (isDay == true)
+        {
+            SceneManager.LoadScene(0);
+        }
+        else
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 
 }
